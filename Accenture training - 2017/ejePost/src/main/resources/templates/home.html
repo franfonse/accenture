@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+<title>Ingresar</title>
+</head>
+
+<body>
+
+<h2>Ingrese su usuario y contraseña</h2>
+
+<form action="#" th:action="@{/acceder}" th:object="${usuario}" method="post">
+
+<p>Usuario: <input type="text" th:field="*{username}"/></p>
+<p>Contraseña: <input type="password" th:field="*{password}"/></p>
+
+<p> <input type="submit" value="Ingresar"/></p>
+
+</form>
+
+<table ></table>
+
+</body>
+
+</html>

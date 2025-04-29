@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+<link rel="stylesheet" type="text/css" href="webjars/bootstrap/3.3.7/css/bootstrap.min.css"/>
+<link rel="stylesheet" th:href="@{/css/main.css}" href="../../css/main.css"/>
+<title>nuevopropietario</title>
+
+</head>
+
+<body>
+
+	<h2>Crear un propietario</h2>
+
+	<form action="#" th:action="@{/nuevoPropietario}" th:object="${prop}" method="post">
+	
+		<div class="form-group">
+		<p>DNI: <input type="text" th:field="*{dni}"/></p>
+		</div>
+		<div class="form-group">
+		<p>Nombre: <input type="text" th:field="{nombre}"/></p>
+		</div>
+		<div class="form-group">
+		<p>Apellido: <input type="text" th:field="*{apellido}"/></p>
+		</div>
+		<div class="form-group">
+		<p>Direccion: <input type="text" th:field="*{direccion}"/></p>
+		</div>
+		<div class="form-group">
+		<p>Tel.: <input type="text" th:field="*{tel}"/></p>
+		</div>
+		
+		<div class="form-group">
+		<input type="submit" class="btn btn-success" value="CREAR"/>
+		<input type="reset" class="btn btn-danger" value="RESETEAR"/>
+		</div>
+
+	</form>
+
+</body>
+
+</html>

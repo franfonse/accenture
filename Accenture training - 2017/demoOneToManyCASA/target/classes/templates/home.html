@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+<title>Home</title>
+</head>
+
+<body>
+
+<h2>Agregue un fabricante</h2>
+
+<form action="#" th:action="@{/createFabricante}" th:object="${fabricante}" method="post">
+
+<p>Fabricante: <input type="text" th:field="*{nombre}"/></p>
+
+<input type="submit" value="AGREGAR"/>
+
+</form>
+
+</body>
+
+</html>

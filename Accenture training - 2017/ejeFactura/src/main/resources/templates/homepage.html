@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+
+<link rel="stylesheet" type="text/css" href="webjars/bootstrap/3.3.7/css/bootstrap.min.css"/>
+<link rel="stylesheet" th:href="@{/css/main.css}" href="../../css/main.css"/>
+
+<title>Homepage</title>
+
+</head>
+
+<body>
+
+	<h2>Cree su factura</h2>
+
+	<form action="#" th:action="@{/nuevaFactura}" th:object="${factura}" method="post">
+	
+	<!-- <input type="hidden" th:field="*{idfactura}"/> -->
+
+		<p th:text="'El ID de su factura es ' + *{idfactura}"></p>
+		<p>Ingrese su ID de cliente: <input type="text" name="clienteid"/></p>
+
+		<input type="submit" value="GENERAR"/>
+		<input width="500px" type="reset" value="RESET"/>
+
+	</form>
+</body>
+
+</html>

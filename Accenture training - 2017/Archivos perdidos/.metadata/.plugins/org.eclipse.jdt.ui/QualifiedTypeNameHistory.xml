@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="com.captton.clase.Cliente"/>
+<fullyQualifiedTypeName name="com.captton.clase.Repuestos"/>
+<fullyQualifiedTypeName name="com.captton.clase.Orden"/>
+<fullyQualifiedTypeName name="com.captton.clase.Item"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="com.accenture.clases.Cliente"/>
+<fullyQualifiedTypeName name="com.accenture.clases.ProductoManufactura"/>
+<fullyQualifiedTypeName name="com.accenture.clases.ProductoServicio"/>
+<fullyQualifiedTypeName name="com.accenture.clases.Factura"/>
+<fullyQualifiedTypeName name="com.accenture.clases.Item"/>
+<fullyQualifiedTypeName name="org.springframework.boot.SpringApplication"/>
+</qualifiedTypeNameHistroy>

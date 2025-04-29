@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+<title>ordenimpresa</title>
+</head>
+
+<body>
+
+<h2>Su orden</h2>
+	
+	<table>
+  <tr>
+  	<th>ID Repuesto</th>
+  	<th>Descripcion</th>
+  	<th>Costo por unidad</th>
+  	<th>Cantidad</th>
+  </tr>
+  <tr th:each="rde: ${listaRepdetalles}">
+  	
+     <td th:text="${rde.getRepuesto().getIdrepuesto()}"></td> 
+       <td th:text="${rde.getRepuesto().getDescripcion()}"></td> 
+       <td th:text="${rde.getRepuesto().getCosto()}"></td> 
+          <td th:text="${rde.getQty()}"></td> 
+          </tr>
+</table>
+
+<p th:text="'Costo final: ' + ${total}"></p>
+
+</body>
+
+</html>

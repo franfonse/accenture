@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+<title>nuevopropietario</title>
+</head>
+
+<body>
+
+	<h2>Dar de alta nuevo propietario</h2>
+	<h3>Ingrese sus datos, por favor:</h3>
+	
+	<form action="#" th:action="@{/nuevoPropietario}" th:object="${prop}" method="post">
+
+		<!-- <p th:text="'Su ID como propietario nuevo es ' + *{idpropietario}"></p> -->
+		<p>DNI: <input type="text" th:field="*{dni}"/></p>
+		<p>Nombre: <input type="text" th:field="*{nombre}"/></p>
+		<p>Apellido: <input type="text" th:field="*{apellido}"/></p>
+		<p>Direccion: <input type="text" th:field="*{direccion}"/></p>
+		<p>Telefono: <input type="text" th:field="*{tel}"/></p>
+
+		<input type="submit" value="ALTA"/>
+		<input type="reset" value="RESET"/>
+
+	</form>
+</body>
+
+</html>

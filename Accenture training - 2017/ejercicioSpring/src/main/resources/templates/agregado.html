@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+<title>Libro agregado</title>
+</head>
+
+<body>
+
+<h1>Libro agregado!</h1>
+<p th:text="'Has agregado el libro ' + ${name} + '.'"></p>
+
+<h4>Lista de libros, modifique a su eleccion:</h4>
+<table>
+<tr>
+<th>Nombre</th>
+<th>Autor</th>
+<th>Editorial</th>
+</tr>
+<tr th:each="libro:${listaBook}">
+<td th:text="${libro.getId()}"></td>
+<td th:text="${libro.getName()}"> </td>
+<td th:text="${libro.getDetails().getAutor()}"></td>
+<td th:text="${libro.getDetails().getEditoral()}"></td>
+<td> <a th:href="@{/deleteLibro(id=${libro.getId()})}">BAJA</a></td>
+<td> <a th:href="@{/editLibro(id=${libro.getId()})}">EDITAR</a></td>
+</tr>
+
+</table>
+
+
+</body>
+</html>

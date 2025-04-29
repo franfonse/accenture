@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+<title>Facturas</title>
+
+<link rel="stylesheet" type="text/css" href="webjars/bootstrap/3.3.7/css/bootstrap.min.css"/>
+<link rel="stylesheet" th:href="@{/css/main.css}" href="../../css/main.css"/>
+
+</head>
+
+<body>
+
+	<h2>Listado de facturas</h2>
+
+	<table>
+
+		<tr>
+			<th>ID factura</th>
+			<th>Cliente</th>
+		</tr>
+
+		<tr th:each="fac: ${listaFacturas}">
+
+			<td th:text="${fac.getIdfactura()}"></td>
+			<td th:text="${fac.getCliente().getNombrecli()}"></td>
+			<td><a th:href="@{/agregarItems(idfactura=${fac.getIdfactura()})}">Agregar items</a></td>
+		</tr>
+
+	</table>
+
+
+</body>
+
+</html>

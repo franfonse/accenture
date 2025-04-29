@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+<title>Fabricante agregado: lista de articulos por fabricante</title>
+</head>
+
+<body>
+
+<table>
+<tr>
+<th>ID</th>
+<th>Nombre de Fabricante</th>
+<th>Articulos del fabricante</th>
+</tr>
+<tr th:each="fabricante:${listaFabricantes}">
+<td th:text="${fab.getId()}"></td>
+<td th:text="${fab.getNombre()}"></td>
+<!-- <td th:text="${fabricante.getDetails().getAutor()}"></td> -->
+<td> <a th:href="@{/deleteFabricante(id=${fab.getId()})}">BORRAR</a></td>
+<!-- <td> <a th:href="@{/editFabricante(id=${fabricante.getId()})}">EDITAR</a></td> -->
+</tr>
+
+</table>
+
+</body>
+
+</html>

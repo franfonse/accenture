@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+<link rel="stylesheet" type="text/css" href="webjars/bootstrap/3.3.7/css/bootstrap.min.css" />
+<link rel="stylesheet" th:href="@{/css/main.css}" href="../../css/main.css" />
+<title>homepage</title>
+
+</head>
+
+<body>
+
+	<h2>Crear orden para propietario</h2>
+
+	<form action="#" th:action="@{/crearOrden}" th:object="${orden}" method="post">
+	
+		<div class="form-group">
+
+		<p>Ingrese ID de propietario: <input type="text" name="idpropietario"/></p>
+		
+		</div>
+		
+		 <div class="form-group">
+
+		<input type="submit" class="btn btn-success" value="CREAR"/>
+		
+		</div>
+
+	</form>
+
+</body>
+
+</html>

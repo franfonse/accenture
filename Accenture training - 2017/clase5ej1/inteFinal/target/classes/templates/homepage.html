@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+<title>Homepage</title>
+</head>
+
+<body>
+
+	<h2>Cree su orden</h2>
+
+	<form action="#" th:action="@{/crearOrden}" th:object="${orden}" method="post">
+
+		<!-- <p th:text="'El ID de su orden es ' + *{idorden}"></p> -->
+		<p>Ingrese su ID de propietario: <input type="text" name="idpropietario"/></p>
+		<p>Ingrese detalle sobre el problema con su automotor: <input type="text" name="detalle"/></p>
+
+		<input type="submit" value="CREAR"/>
+		<input type="reset" value="RESET"/>
+
+	</form>
+</body>
+
+</html>

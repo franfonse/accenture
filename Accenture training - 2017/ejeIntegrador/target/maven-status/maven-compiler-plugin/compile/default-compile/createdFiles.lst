@@ -1,0 +1,10 @@
+com\example\ejeIntegrador\model\Repuesto.class
+com\example\ejeIntegrador\model\DaoRepdetalle.class
+com\example\ejeIntegrador\model\DaoPropietario.class
+com\example\ejeIntegrador\model\DaoRepuesto.class
+com\example\ejeIntegrador\model\Repdetalle.class
+com\example\ejeIntegrador\model\Orden.class
+com\example\ejeIntegrador\model\Propietario.class
+com\example\ejeIntegrador\controller\MainController.class
+com\example\ejeIntegrador\model\DaoOrden.class
+com\example\ejeIntegrador\EjeIntegradorApplication.class

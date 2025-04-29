@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+<title>Homepage</title>
+<link rel="stylesheet" type="text/css" href="webjars/bootstrap/3.3.7/css/bootstrap.min.css"/>
+<link rel="stylesheet" th:href="@{/css/main.css}" href="../../css/main.css"/>
+</head>
+
+<body>
+
+	<h2>Cree su orden</h2>
+
+	<form action="#" th:action="@{/crearOrden}" th:object="${orden}" method="post">
+
+		<!-- <p th:text="'El ID de su orden es ' + *{idorden}"></p> -->
+		<p>Ingrese ID de propietario: <input type="text" name="idpropietario"/></p>
+		<p>Ingrese detalle sobre el problema con el automotor: <input type="text" name="detalle"/></p>
+		
+		<input type="submit" value="CREAR"/>
+		<input type="reset" value="RESET"/>
+
+	</form>
+	
+	<h2></h2>
+	
+	<table>
+  <tr>
+  	<th>ID Propietario</th>
+  	<th>Nombre</th>
+  </tr> 
+  <tr th:each="pro: ${listaPropietarios}">
+  	
+     <td th:text="${pro.getIdpropietario()}"></td>
+     <td th:text="${pro.getNombre()}"></td>
+     
+  </tr>
+</table>
+
+</body>
+
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+<title>Post comment</title>
+</head>
+
+<body>
+
+<h2>Escriba su post</h2>
+
+<form action="#" th:action="@{/crearPost}" th:object="${user}" method="post">
+
+<p>Titulo: <input type="text" th:field="*{titulo}"/></p>
+<p>Post: <input type="text" th:field="*{post}"/></p>
+
+<p> <input type="submit" value="Ingresar"/> </p>
+
+</form>
+
+<table>
+
+<tr th:each="comme: ${listaComment}">
+<td th:text="${comme.get}"></td>
+<td th:text="${comme.get}"></td>
+<td th:text="${comme.get}"></td>
+<!-- <td> <a th:href="@{/deleteIngrediente(id=${ingre.getIngrediente.getId()})}">Borrar</a></td> -->
+
+</tr>
+
+</table>
+
+</body>
+
+</html>

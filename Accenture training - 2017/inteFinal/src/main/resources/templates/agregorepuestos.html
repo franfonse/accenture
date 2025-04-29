@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+<title>agregorepuestos</title>
+<link rel="stylesheet" type="text/css" href="webjars/bootstrap/3.3.7/css/bootstrap.min.css"/>
+<link rel="stylesheet" th:href="@{/css/main.css}" href="../../css/main.css"/>
+</head>
+
+<body>
+
+<h2>Repuestos disponibles</h2>
+	
+	<table>
+  <tr>
+  	<th>ID Repuesto</th>
+  	<th>Imagen</th>
+  	<th>Descripcion del repuesto</th>
+  	<th>Costo por unidad</th>
+  </tr> 
+  <tr th:each="pro: ${listaRepuestos}">
+  	
+     <td th:text="${pro.getIdrepuesto()}"></td>
+     <td><img src="#" th:src="@{ ${pro.getUrl()}}" width="80" height="80"/></td>
+     <td th:text="${pro.getDescripcion()}"></td>
+     <td th:text="${pro.getCosto()}"></td>
+     
+  </tr>
+</table>
+	
+	<h2>Agregar repuestos a la orden</h2>
+	
+	<form action="#" th:action="@{/agregarRepuesto}" th:object="${orden}" method="post">
+	<p th:text="'El ID de la orden es: ' + *{idorden}"></p><input type="hidden" th:field="*{idorden}"/>
+	<p>ID Producto: <input type="text" name="idrepuesto"/></p>
+	<p>Cantidad: <input type="text" name="qty"/></p>
+	<p>Horas de trabajo: <input type="text" name="horas"/></p>
+	<input type="submit" value="AGREGAR"/>
+	
+	</form>
+	
+	
+	<h2>Repuestos agregados</h2>
+	<table>
+		<tr>
+			<th>ID Repuesto</th>
+			<th>Descripcion</th>
+			<th>Cantidad</th>
+			<th>Costo</th>
+		</tr>
+		<tr th:each="rde: ${listaRepdetalles}">
+			<td th:text="${rde.getRepuesto().getIdrepuesto()}"></td>
+			<td th:text="${rde.getRepuesto().getDescripcion()}"></td>
+			<td th:text="${rde.getQty()}"></td>
+			<td th:text="${rde.getRepuesto().getCosto()}"></td>
+		</tr>
+	</table>
+	
+	<a th:href="@{/imprimirOrden(idorden=${orden.getIdorden()})}">Finalizar orden e imprimir</a>
+	
+
+</body>
+
+</html>

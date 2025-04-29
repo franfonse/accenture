@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+<title>Agregar libros</title>
+</head>
+
+<body>
+
+<h1>Agregue o elimine un libro</h1>
+
+<form action="#" th:action="@{/createBook}" th:object="${libro}" method="post">
+
+<p>Nombre: <input type="text" th:field="*{name}"/> </p>
+<p>Autor: <input type="text" name="auto"/> </p>
+<p>Editorial: <input type="text" name="edit"/> </p>
+
+<p> <input type="submit" value="ALTA"/> </p>
+
+
+</form>
+
+
+</body>
+
+
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+<title>ordenes</title>
+</head>
+
+<body>
+
+	<h2>Lista de ordenes</h2>
+
+	<table>
+
+		<tr>
+			<th>Propietario</th>
+			<th>Numero de orden</th>
+			<th></th>
+		</tr>
+
+		<tr th:each="ord: ${listaOrdenes}">
+
+			<td th:text="${ord.getPropietario().getNombre()}"></td>
+			<td th:text="${ord.getIdorden()}"></td>
+			<td><a th:href="@{/agregarRepOrden(idorden=${ord.getIdorden()})}">Agregar productos a la orden</a></td>
+		</tr>
+
+	</table>
+
+
+</body>
+
+</html>

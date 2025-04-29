@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+<title>login</title>
+<link rel="stylesheet" type="text/css" href="webjars/bootstrap/3.3.7/css/bootstrap.min.css"/>
+<link rel="stylesheet" th:href="@{/css/main.css}" href="../../css/main.css"/>
+</head>
+
+<body>
+
+	<h2>Ingrese su nombre de usuario y contraseña</h2>
+
+	<form action="#" th:action="@{/login}" th:object="${}" method="post">
+
+		<p>Nombre de usuario: <input type="text" th:field="username"/></p>
+		<p>Contraseña: <input type="text" th:field="password"/></p>
+		
+		<input type="submit" value="CREAR"/>
+		<input type="reset" value="RESET"/>
+
+	</form>
+	
+	<h2></h2>
+	
+	<table>
+  <tr>
+  	<th>ID Propietario</th>
+  	<th>Nombre</th>
+  </tr> 
+  <tr th:each="pro: ${listaPropietarios}">
+  	
+     <td th:text="${pro.getIdpropietario()}"></td>
+     <td th:text="${pro.getNombre()}"></td>
+     
+  </tr>
+</table>
+
+</body>
+
+</html>

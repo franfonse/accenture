@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+<title>agregado de alumno</title>
+</head>
+
+<body>
+
+<h1>Alumno agregado</h1>
+<p th:text="'Estas agregado, ' + ${nombre} + ' ' + ${apellido} + '.'"></p>
+
+<!-- <table>
+<tr>
+<th>Nombre</th>
+<th>Apellido</th>
+<th>Edad</th>
+</tr>
+<tr th:each="alu:${listaalum}">
+<td th:text="${alu.getId()}"></td>
+<td th:text="${alu.getNombre()}"> </td>
+<td th:text="${alu.getApellido()}"></td>
+<td th:text="${alu.getEdad()}"></td>
+<td> <a th:href="@{/deleteAlumno(id=${alu.getId()})}">delete</a></td>
+</tr>
+
+</table> -->
+
+
+</body>
+</html>
